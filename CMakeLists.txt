@@ -94,19 +94,19 @@ include_directories(
   ${PCL_COMMON_INCLUDE_DIRS}
 )
 
-add_subdirectory(lib)
-
-add_subdirectory(src)
-# extra image intra-process demos
-add_subdirectory(intra)
-# extra type-adaption cuda demos
-add_subdirectory(cuda)
-
-if(BUILD_TESTING)
-  add_subdirectory(test)
-endif()
-
-add_subdirectory(tool)
+#add_subdirectory(lib)
+#
+#add_subdirectory(src)
+## extra image intra-process demos
+#add_subdirectory(intra)
+## extra type-adaption cuda demos
+#add_subdirectory(cuda)
+#
+#if(BUILD_TESTING)
+#  add_subdirectory(test)
+#endif()
+#
+#add_subdirectory(tool)
 
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION include/${PROJECT_NAME}/
