@@ -38,8 +38,8 @@ if(NOT OpenCV_FOUND)
   find_package(OpenCV 3 REQUIRED)
 endif()
 
-find_package(iceoryx_posh CONFIG REQUIRED)
-find_package(fastrtps CONFIG REQUIRED)
+#find_package(iceoryx_posh CONFIG REQUIRED)
+#find_package(fastrtps CONFIG REQUIRED)
 
 set(dependencies
   rclcpp
