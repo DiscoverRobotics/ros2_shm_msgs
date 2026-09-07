@@ -22,16 +22,16 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rcpputils REQUIRED)
 find_package(cv_bridge REQUIRED)
-find_package(pcl_conversions REQUIRED)
+#find_package(pcl_conversions REQUIRED)
 find_package(message_filters REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
 find_package(ament_cmake REQUIRED)
-find_package(Eigen3 REQUIRED)
-find_package(Open3D)
-find_package(Boost QUIET)
-find_package(PCL REQUIRED QUIET COMPONENTS common io)
-find_package(pcl_msgs REQUIRED)
+#find_package(Eigen3 REQUIRED)
+#find_package(Open3D)
+#find_package(Boost QUIET)
+#find_package(PCL REQUIRED QUIET COMPONENTS common io)
+#find_package(pcl_msgs REQUIRED)
 
 find_package(OpenCV 4 QUIET)
 if(NOT OpenCV_FOUND)
@@ -46,7 +46,6 @@ set(dependencies
   rosidl_default_runtime
   cv_bridge
   message_filters
-  pcl_msgs
   sensor_msgs
 )
 
