@@ -6,8 +6,6 @@ list(INSERT CMAKE_MODULE_PATH 0 ${CMAKE_CURRENT_LIST_DIR}/cmake)
 
 # add installation directory here
 # list(INSERT CMAKE_PREFIX_PATH 0 /opt/open3d/open3d)
-list(INSERT CMAKE_PREFIX_PATH 0 /opt/opencv/opencv-4.6.0/)
-
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 17)
 endif()
@@ -17,36 +15,10 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
-find_package(geometry_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(rcpputils REQUIRED)
-find_package(cv_bridge REQUIRED)
-#find_package(pcl_conversions REQUIRED)
-find_package(message_filters REQUIRED)
-find_package(sensor_msgs REQUIRED)
-
-find_package(ament_cmake REQUIRED)
-#find_package(Eigen3 REQUIRED)
-#find_package(Open3D)
-#find_package(Boost QUIET)
-#find_package(PCL REQUIRED QUIET COMPONENTS common io)
-#find_package(pcl_msgs REQUIRED)
-
-find_package(OpenCV 4 QUIET)
-if(NOT OpenCV_FOUND)
-  find_package(OpenCV 3 REQUIRED)
-endif()
-
-#find_package(iceoryx_posh CONFIG REQUIRED)
-#find_package(fastrtps CONFIG REQUIRED)
 
 set(dependencies
-  rclcpp
   rosidl_default_runtime
-  cv_bridge
-  message_filters
-  sensor_msgs
 )
 
 set(msg_files
@@ -86,12 +58,6 @@ if(cpp_typesupport_target)
     TARGETS ${PROJECT_NAME}_library EXPORT export_${PROJECT_NAME}
   )
 endif()
-
-include_directories(
-  include
-  ${EIGEN3_INCLUDE_DIR}
-  ${PCL_COMMON_INCLUDE_DIRS}
-)
 
 #add_subdirectory(lib)
 #
